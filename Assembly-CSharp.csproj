@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Assets\04.Scripts\GameManager.cs" />
     <Compile Include="Assets\04.Scripts\MoveBackGround.cs" />
+    <Compile Include="Assets\04.Scripts\OKB.cs" />
     <Compile Include="Assets\04.Scripts\PlayerCtrl.cs" />
     <Compile Include="Assets\04.Scripts\StartGame.cs" />
     <Compile Include="Assets\04.Scripts\WayGame.cs" />
