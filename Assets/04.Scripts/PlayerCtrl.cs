@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerCtrl : MonoBehaviour
 {
-
     public int hp = 10;
     public int initHp = 10;
     public Rigidbody2D rb;
@@ -15,7 +14,7 @@ public class PlayerCtrl : MonoBehaviour
     float h;  //좌,우
     float v;    //위,아래
 
-    void Awake() {
+    private void Awake() {
         hp = initHp;
     }
 
@@ -51,14 +50,13 @@ public class PlayerCtrl : MonoBehaviour
         {
             tr.position = new Vector3(-wSize + offset, tr.position.y, 0);
         }
-    }
 
-    void OnTriggerEnter2D(Collider2D coll) {
-        if (coll.CompareTag("ENEMY")) {
-            Debug.Log("Touch!");
-            hp--;
-            if(hp <= 0) {
-                Debug.Log("Player Die");
+        void OnTriggerEnter2D (Collider2D coll){
+            if (coll.CompareTag("ENEMY")){
+                hp--;
+                if(hp <= 0){
+                    Debug.Log("Player Die");
+                }
             }
         }
     }
